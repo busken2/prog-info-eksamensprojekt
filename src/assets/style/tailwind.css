@@ -1,0 +1,21 @@
+/* ./src/style/tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sidebar-menu-item {
+    @apply text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md
+
+}
+.sidebar-menu-item-active {
+    @apply bg-gray-200 hover:bg-gray-200 text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md
+
+}
+.sidebar-menu-svg {
+    @apply text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6
+
+}
+.sidebar-menu-svg-active {
+    @apply text-gray-500 mr-3 h-6 w-6
+
+}
