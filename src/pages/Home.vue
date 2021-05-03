@@ -303,7 +303,7 @@ export default {
   methods: {
     async getOverview() {
         const response = await this.$axios.get("/expenses-overview")
-        this.data = response
+        this.data = response.data
         console.log(this.data)
 
     },
