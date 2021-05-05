@@ -1,17 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../pages/Home.vue'
-import ExpensesOverview from '../pages/ExpensesOverview.vue'
+import Expense from '../pages/Expense.vue'
+import NewExpense from '../pages/NewExpense.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: Home
   },
   {
-    path: '/expenses-overview',
-    name: 'ExpensesOverview',
-    component: ExpensesOverview
+    path: '/expense/new',
+    name: 'expense-new',
+    component: NewExpense
+  },
+  {
+    path: '/expense/:id',
+    name: 'expense',
+    component: Expense
   }
   // {
   //   path: '/about',
