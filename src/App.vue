@@ -132,7 +132,7 @@
                   Dashboard
                 </router-link> 
                 
-                <router-link to="expense/new" class="sidebar-menu-item" active-class="sidebar-menu-item-active">
+                <router-link :to="{name: 'expense-new'}" class="sidebar-menu-item" active-class="sidebar-menu-item-active">
                   <!-- Current: "text-gray-500", Default: "text-gray-400 group-hover:text-gray-500" -->
                   <!-- Heroicon name: outline/cash -->
                   <svg xmlns="http://www.w3.org/2000/svg" class="sidebar-menu-svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor">

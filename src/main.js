@@ -22,14 +22,14 @@ import moment from 'moment'
 const app = createApp(App)
 app.use(router).mount('#app')
 
-const base = axios.create({
+const baseaxios = axios.create({
     baseURL: "https://prog-eksamensprojekt-6f9py.ondigitalocean.app/api", 
     timeout: 10000,
     headers: { 'Cache-Control' : 'no-cache'},
   });
 
 
-app.config.globalProperties.$axios = base;
+app.config.globalProperties.$axios = baseaxios;
 
 
 app.mixin({

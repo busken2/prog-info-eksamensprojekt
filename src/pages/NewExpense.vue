@@ -48,13 +48,16 @@
                 <dd class=" text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                   <input v-model="form.due_date" type="text" name="due_date" id="due_date" class="shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="2021-01-22">
                 </dd>
+
             </div>
+            
+
             <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                 <dt class="text-sm font-medium text-gray-500">
                 Udgiftsbeløb
                 </dt>
                 <dd class=" text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                  <input v-model="form.amount" type="text" name="amount" id="amount" class="shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="100">
+                  <input @change="calcVat()" v-model="form.amount" type="text" name="amount" id="amount" class="shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="100">
                 </dd>
             </div>
             <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -62,7 +65,7 @@
                 Moms
                 </dt>
                 <dd class=" text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                  <input v-model="form.tax" type="text" name="tax" id="tax" class="shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="25">
+                  <input disabled v-model="form.tax" type="text" name="tax" id="tax" class="shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="0">
                 </dd>
             </div>
             </dl>
@@ -81,9 +84,11 @@
 
 <script>
 import PageHeader from '@/components/PageHeader'
+
+
 export default {
   components: {
-    PageHeader
+    PageHeader,
   },
   data () {
     return {
@@ -93,6 +98,9 @@ export default {
     }
   },
   methods: {
+    calcVat (){
+      this.form.tax = (this.form.amount / 0.80) - this.form.amount
+    },
     submitForm(){
       this.$axios.post('/new/expense', this.form)
             .then((res) => {
