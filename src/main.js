@@ -23,7 +23,7 @@ const app = createApp(App)
 app.use(router).mount('#app')
 
 const base = axios.create({
-    baseURL: "http://127.0.0.1:8000/api", 
+    baseURL: "https://prog-eksamensprojekt-6f9py.ondigitalocean.app/api", 
     timeout: 10000,
     headers: { 'Cache-Control' : 'no-cache'},
   });
