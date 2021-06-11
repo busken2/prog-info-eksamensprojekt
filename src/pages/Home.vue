@@ -270,29 +270,6 @@ methods: {
       });
 
     },
-    // async getExpenses() {
-    //   try {
-    //     const response = await this.$axios.get("/expenses")
-    //     this.expenses = response.data
-    //     console.log(response.data);
-    //   } catch (err) {
-    //     this.errors.push(err)
-    //   }
-    // },
-    // getOverview() {
-    //   this.$axios
-    //     .get("/expenses-overview")
-    //     .then(response => {
-    //     this.overview_data = response.data
-    //   })
-    //   .catch(error => {
-    //     console.log(error)
-    //     this.errored = true
-    //   })
-    //   .finally(() => this.loading = false)
-
-    // },
-
   }
 }
 </script>

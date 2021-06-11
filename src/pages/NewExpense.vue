@@ -33,9 +33,11 @@
                 </dt>
                 <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                   <select v-model="form.expense_category" id="expense_category" name="expense_category" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                    <option>USA</option>
-                    <option selected>Canada</option>
-                    <option>EU</option>
+                    <option selected>Administrationsomkostninger (DK)</option>
+                    <option >Lokaleomkostninger (DK)</option>
+                    <option >Salgsomkostninger (DK)</option>
+                    <option >Transportomkostninger (DK)</option>
+                    <option >Vareforbrug (DK)</option>
                   </select>
                 </dd>
             </div>

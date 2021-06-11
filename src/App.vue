@@ -104,23 +104,6 @@
             </div>
           </nav>
         </div>
-        <div class="flex-shrink-0 flex border-t border-gray-200 p-4">
-          <a href="#" class="flex-shrink-0 group block">
-            <div class="flex items-center">
-              <div>
-                <img class="inline-block h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80" alt="">
-              </div>
-              <div class="ml-3">
-                <p class="text-base font-medium text-gray-700 group-hover:text-gray-900">
-                  Whitney Francis
-                </p>
-                <p class="text-sm font-medium text-gray-500 group-hover:text-gray-700">
-                  View profile
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
       </div>
 
       <div class="flex-shrink-0 w-14" aria-hidden="true">
@@ -147,28 +130,20 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                   </svg>
                   Dashboard
+                </router-link> 
+                
+                <router-link to="expense/new" class="sidebar-menu-item" active-class="sidebar-menu-item-active">
+                  <!-- Current: "text-gray-500", Default: "text-gray-400 group-hover:text-gray-500" -->
+                  <!-- Heroicon name: outline/cash -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="sidebar-menu-svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                  Bogfør udgift
                 </router-link>
 
 
               </div>
             </nav>
-          </div>
-          <div class="flex-shrink-0 flex border-t border-gray-200 p-4">
-            <a href="#" class="flex-shrink-0 w-full group block">
-              <div class="flex items-center">
-                <div>
-                  <img class="inline-block h-9 w-9 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80" alt="">
-                </div>
-                <div class="ml-3">
-                  <p class="text-sm font-medium text-gray-700 group-hover:text-gray-900">
-                    Whitney Francis
-                  </p>
-                  <p class="text-xs font-medium text-gray-500 group-hover:text-gray-700">
-                    View profile
-                  </p>
-                </div>
-              </div>
-            </a>
           </div>
         </div>
       </div>
